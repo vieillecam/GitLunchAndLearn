@@ -13,6 +13,10 @@
 
 ## Basic Day to Day WorkFlow
 
+### Most Important
+
+``git status``
+
 ### Branching
 
 Show All branches ``git branch -a | grep SPWEB*``
@@ -61,22 +65,13 @@ git log
 gitk filename
 ```
 
-### Lastest commit
-
-Undo latest commit
+## Merging
 
 ``` sh
-git reset --hard HEAD
+git merge master
+# merging mode
+git commit -m 'fixed some merge conflicts'
 ```
-
-Ammend last commit
-
-```sh
-git commit --amend
-```
-
-
-## Merging
 
 ## Stashes (~Shelvesets)
 
@@ -119,3 +114,48 @@ lg = !"git lg1"
 ## SSH vs HTTPS Connection to the remote
 
 [public SSH Key](https://www.visualstudio.com/fr-ca/docs/git/use-ssh-keys-to-authenticate)
+
+## More advanced situations
+
+Visit a specific commit in time :
+
+``` sh
+git checkout <commit hash>
+# want to experiment some changes ?
+git checkout -b new-branch <commit-hash>
+```
+
+## Undo things :
+
+Undo latest commit
+
+``` sh
+git reset --hard HEAD
+```
+
+Ammend last commit
+
+```sh
+git commit --amend
+```
+
+Hard delete **unpublished** commits :
+
+``` sh
+git reset --hard <commit hash>
+# some work to keep before ?
+git stash
+git reset --hard <commit hash>
+git stash pop
+```
+
+Hard delete **published** commits :
+
+``` sh
+git revert <commit hash 1> <commit hash 2> <commit hash 3>
+# some work to keep before ?
+git commit
+```
+
+
+### rebase / 
