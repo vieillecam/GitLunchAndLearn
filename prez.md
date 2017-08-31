@@ -8,8 +8,21 @@
 * git-gui
 * Visual Studio Code
 * Visual Studio
-* ...
+* git bash
 
+### CLI PROS
+
+* Work on every development platform
+* Work can be automated
+* Command line is the only option for specific tasks
+* The command line lets you know exactly what you do, exactly when you do it
+
+### GUI PROS
+
+* GUIs help take care of a lot of work that can be obscure
+* A GUI can save you many lines of code with a drag-and-drop or the push of a button
+* The barrier-of-entry for GUIs is much lower than for the command line
+* Most importantly, GUIs are best able to graphically represent collaboration
 
 ## Basic Day to Day WorkFlow
 
