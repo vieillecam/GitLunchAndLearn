@@ -124,9 +124,12 @@ lg = !"git lg1"
 
 ``git config --global alias.pl pull``
 
-## SSH vs HTTPS Connection to the remote
-
-[public SSH Key](https://www.visualstudio.com/fr-ca/docs/git/use-ssh-keys-to-authenticate)
+``` sh
+# Set git to use the credential memory cache
+git config --global credential.helper cache
+# Set the cache to timeout after 1 hour (setting is in seconds)
+git config --global credential.helper 'cache --timeout=3600'
+```
 
 ## More advanced situations
 
@@ -169,6 +172,3 @@ git revert <commit hash 1> <commit hash 2> <commit hash 3>
 # some work to keep before ?
 git commit
 ```
-
-
-### rebase / 
